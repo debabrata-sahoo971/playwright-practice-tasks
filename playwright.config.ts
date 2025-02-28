@@ -17,19 +17,9 @@ export default defineConfig({
 
   projects: [
     {
-      name: 'task-1.1',
+      name: 'task-1',
       use: { ...devices['Desktop Chrome'] },
-      testMatch: '**/task-1.1.spec.ts'
-    },
-    {
-      name: 'task-1.2',
-      use: { ...devices['Desktop Chrome'] },
-      testMatch: '**/task-1.2.spec.ts'
-    },
-    {
-      name: 'task-1.3',
-      use: { ...devices['Desktop Chrome'] },
-      testMatch: '**/task-1.3.spec.ts'
+      testMatch: '**/*.spec.ts',
     },
   ],
 });

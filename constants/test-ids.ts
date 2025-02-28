@@ -6,6 +6,7 @@ export const FORM_PAGE_IDS = {
     submitButton: "start-or-submit-button",
     formError: "form-error-text",
     thankYou: "thank-you-page-message",
+    welcomeScreen: "welcome-screen",
 };
 
 export const DASHBOARD_IDS = {
@@ -36,4 +37,12 @@ export const DASHBOARD_IDS = {
     startsMetric: 'starts-metric',
     submissionsMetric: 'submissions-metric',
     insightsCount: 'insights-count',
+}
+
+export const TEARDOWN_IDS = {
+    dropdownIcon: 'nui-dropdown-icon',
+    deleteButton: 'form-delete-button',
+    confirmChechbox: 'nui-checkbox-label',
+    finalDelete: 'delete-archive-alert-delete-button',
+    mainHeader: 'main-header'
 }

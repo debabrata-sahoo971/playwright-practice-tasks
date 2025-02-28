@@ -79,7 +79,7 @@ class FormPage {
 
     checkOptionsForm = async ()=>{
         await this.page.waitForLoadState("domcontentloaded");
-        await expect(this.page.getByTestId('welcome-screen')).toBeVisible();
+        await expect(this.page.getByTestId(FORM_PAGE_IDS.welcomeScreen)).toBeVisible();
 
         const randomOrder: string[] = await this.page
             .getByTestId(DASHBOARD_IDS.singleChoiceOptionsContainer)
@@ -96,7 +96,7 @@ class FormPage {
 
     recheckOptionsForm = async() => {
         await this.page.waitForLoadState("domcontentloaded");
-        await expect(this.page.getByTestId('welcome-screen')).toBeVisible();
+        await expect(this.page.getByTestId(FORM_PAGE_IDS.welcomeScreen)).toBeVisible();
 
         const multiOrder = this.page
             .getByTestId(DASHBOARD_IDS.multiChoiceOptionsContainer);
@@ -115,7 +115,7 @@ class FormPage {
 
     pageLookup = async()=>{
         await this.page.waitForLoadState("domcontentloaded");
-        await expect(this.page.getByTestId('welcome-screen')).toBeVisible();
+        await expect(this.page.getByTestId(FORM_PAGE_IDS.welcomeScreen)).toBeVisible();
 
         await this.page.close();
     };
@@ -130,7 +130,7 @@ class FormPage {
 
     pageLookupAndSubmit = async()=>{
         await this.page.waitForLoadState("domcontentloaded");
-        await expect(this.page.getByTestId('welcome-screen')).toBeVisible();
+        await expect(this.page.getByTestId(FORM_PAGE_IDS.welcomeScreen)).toBeVisible();
 
         await this.page.getByTestId(FORM_PAGE_IDS.email).fill('oliver@example.com');
         await this.page.getByTestId(FORM_PAGE_IDS.submitButton).click()

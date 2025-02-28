@@ -23,9 +23,6 @@ class Dashboard {
         this.context = context;
     }
     createFormAndVerify = async() => {
-        await this.page.getByTestId(DASHBOARD_IDS.addFormButton).click();
-        await this.page.getByTestId(DASHBOARD_IDS.startFromScratch).click();
-
         const addFullName = this.page.getByTestId(DASHBOARD_IDS.addFullName).getByText('Full name');
         await addFullName.scrollIntoViewIfNeeded();
         await addFullName.click();
@@ -56,9 +53,6 @@ class Dashboard {
     };
 
     createOptionsForm = async() => {
-        await this.page.getByTestId(DASHBOARD_IDS.addFormButton).click();
-        await this.page.getByTestId(DASHBOARD_IDS.startFromScratch).click();
-
         const addSingleChoice = this.page
             .getByTestId(DASHBOARD_IDS.addSingleChoiceElement)
             .getByText('Single choice');
@@ -119,10 +113,7 @@ class Dashboard {
     };
 
     createBasicForm = async()=>{
-        await this.page.getByTestId(DASHBOARD_IDS.addFormButton).click();
-        await this.page.getByTestId(DASHBOARD_IDS.startFromScratch).click();
         await this.page.getByTestId(DASHBOARD_IDS.publishButton).click();
-
         await this.page.getByTestId(DASHBOARD_IDS.moreDropdown).click();
         await this.page.getByTestId(DASHBOARD_IDS.analytics).click();
         await expect(this.page.getByTestId(DASHBOARD_IDS.insightsTitle)).toBeVisible();
